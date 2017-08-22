@@ -1,38 +1,40 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class WeatherReport
+public class Weather_Project
 {
 
+	//Tell the temperature when number is input into the terminal
+	
 	public static void main(String[] args) 
 	{
-		Scanner cin = new Scanner(System.in);
+		Scanner cin = new Scanner(System.in); //Detects input and output
 		
-		System.out.println("Welcome please enter Temperature in Fahrenheit");
+		System.out.println("Welcome please enter Temperature in Fahrenheit"); 
 		
-		int temper = cin.nextInt();
+		int temper = cin.nextInt(); //variable that indicates the temperature
 		
-		double c = 0;
+		double c = 0; //variable for degrees Centigrade conversion
 	
-		if(temper < 32)
+		c = 5.0*(temper - 32.0)/9.0; //equation for Centigrade conversion
+		
+		System.out.println(c + " degrees Centigrade");
+		
+		if (temper < 32)//give temperature if less than 32
 		{
-			c = 5.0*(temper - 32.0)/9.0;
-			System.out.println(c + " degrees Centigrade");
 			System.out.println("It's Cold Outside");
 		}
 		
-		if (temper > 90)
+		if (temper > 90)//give temperature if greater than 90
 		{
-			c = 5.0*(temper - 32.0)/9.0;
-			System.out.println(c + " degrees Centigrade");
 			System.out.println("It's Hot Outside");
 		}
-		
-		else
+	
+		else //give temperature if between 90 and 32
 		{
-			c = 5.0*(temper - 32.0)/9.0;
-			System.out.println(c + " degrees Centigrade");
 		}
 		System.out.println("Have a Nice Day");
 		
 		cin.close();
 	}
+
+}
